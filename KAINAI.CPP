@@ -1,0 +1,33 @@
+#include<iostream.h>
+#include<conio.h>
+typedef int
+
+int add(int *a,int *b)
+{
+	int op;
+	op=*(a)+*(b);
+	cout<<"Sum is : "<<op;
+	return 0;
+}
+
+int  sub(int *a,int *b)
+{
+	int po;
+	po=(*a)-*(b);
+	cout<<"Sub is : "<<po;
+	return 0;
+}
+
+int main()
+{
+	int *ptr;
+	int *a,*b;
+	cout<<"Enter a : ";
+	cin>>(*a);
+	cout<<"Enter b : ";
+	cin>>(*b);
+	ptr=&add;
+	ptr=&sub;
+	getch();
+	return 0;
+}

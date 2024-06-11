@@ -1,0 +1,13 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int x,a,b,c;
+	clrscr();
+	cout<<"enter a b c";
+	cin>>a>>b>>c;
+	x=(a/b)-c;
+	cout<<"x is "<<x;
+	getch();
+}

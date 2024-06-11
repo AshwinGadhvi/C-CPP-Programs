@@ -1,0 +1,38 @@
+#include<iostream.h>
+#include<conio.h>
+
+class objdemo
+{
+	int x,y;
+	public:
+	void getdata(){
+	cout<<"Enter value of x : ";
+	cin>>x;
+	cout<<"Enter value of y : ";
+	cin>>y;
+	}
+	void showdata()
+	{
+		cout<<"x="<<x<<endl;
+		cout<<"y="<<y<<endl<<endl;
+	}
+	objdemo add(objdemo ob2)
+	{
+		objtdemo ob3;
+		ob3.x=x+ob2.x;
+		ob3.y=y+ob2.y;
+		return ob3;
+	}
+
+};
+
+void main()
+{
+	objdemo ob1,ob2,ob3;
+	clrscr();
+	ob1.getdata();
+	ob2.getdata();
+	ob3=ob1.add(ob2);
+	ob3.showdata();
+	getch();
+}

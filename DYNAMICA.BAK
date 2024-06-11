@@ -1,0 +1,84 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int **mat,**mat2,**mat3,*a,m,n,i,j;
+	clrscr();
+	cout<<"Enter Value of m : ";
+	cin>>m;
+	cout<<"Enter value of n : ";
+	cin>>n;
+	mat=new int* [m];
+	for(i=0;i<m;i++)
+	{
+		mat[i]=new int [n];
+	}
+	cout<<"\nEnter Matrix Element ::\n";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			cout<<"mat["<<i<<"]["<<j<<"]::";
+			cin>>mat[i][j];
+		}
+	}
+	cout<<"\nMATRIX::"<<endl;
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+		     //	cout<<"["<<i<<"]["<<j<<"]::"<<mat[i][j];
+		     cout<<" "<<mat[i][j];
+		}
+		cout<<"\n";
+	}
+
+	mat2=new int* [m];
+	for(i=0;i<m;i++)
+	{
+		mat2[i]=new int [n];
+	}
+	cout<<"\nEnter 2 Matrix Element ::\n";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			cout<<"mat["<<i<<"]["<<j<<"]::";
+			cin>>mat2[i][j];
+		}
+	}
+	cout<<"\nMATRIX::"<<endl;
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			cout<<" "<<mat2[i][j];
+		}
+		cout<<"\n";
+	}
+
+	mat3=new int* [m];
+	for(i=0;i<m;i++)
+	{
+		mat3[i]=new int [n];
+	}
+	cout<<"\nEnter Matrix Element ::\n";
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+		    mat3[i][j]=mat[i][j]+mat2[i][j];
+		}
+	}
+	cout<<"\nADDED MATRIX::"<<endl;
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			cout<<" "<<mat3[i][j];
+		}
+		cout<<"\n";
+	}
+	getch();
+}

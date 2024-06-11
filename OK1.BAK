@@ -1,0 +1,17 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int a,b,temp;
+	clrscr();
+	cout<<"Enter A : ";
+	cin>>a;
+	cout<<"Enter b : ";
+	cin>>b;
+	temp = a;
+	a = b;
+	b = temp;
+	cout<<"after Swap is : "<<endl<<"A is : "<<a<<endl<<"B is : f"<<b;
+	getch();
+}

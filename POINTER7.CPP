@@ -1,0 +1,24 @@
+#include<iostream.h>
+#include<conio.h>
+
+int *larger(int *x,int *y)
+{
+	if(*(x)>*(y))
+	{
+		return (x);
+	}
+	else
+	{
+		return (y);
+	}
+}
+void main()
+{
+	int a=10;
+	int b=20;
+	int *p;
+	clrscr();
+	p=larger(&a,&b);
+	cout<<"value larger : "<<*p;
+	getch();
+}

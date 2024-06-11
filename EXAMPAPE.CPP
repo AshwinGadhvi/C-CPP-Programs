@@ -1,0 +1,36 @@
+#include<iostream.h>
+#include<conio.h>
+
+class a{
+	public:
+		a()
+		{
+			cout<<"A constructor called : "<<endl;
+		}
+};
+
+class b
+
+{
+	public:
+		b()
+		{
+			cout<<"B constructor called : "<<endl;
+		}
+};
+
+class c:public b,public a
+{
+	public:
+		c()
+		{
+			cout<<"C constructor called : "<<endl;
+		}
+};
+
+void main()
+{
+	clrscr();
+	c c1;
+	getch();
+}

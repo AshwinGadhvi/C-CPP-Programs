@@ -1,0 +1,27 @@
+#include<iostream.h>
+#include<conio.h>
+
+class op{
+
+	public:
+	int a,b,ans;
+	void add(int a1,int b1)
+	{
+
+		a=a1;
+		b=b1;
+		ans=a+b;
+	}
+	void show_data()
+	{
+		cout<<"Sum is : "<<ans;
+	}
+};
+void main()
+{
+	op p1;
+	clrscr();
+	p1.add(12,13);
+	p1.show_data();
+	getch();
+}

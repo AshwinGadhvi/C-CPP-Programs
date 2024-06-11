@@ -1,0 +1,50 @@
+#include<iostream.h>
+#include<conio.h>
+
+class maximum{
+	private:
+		int a,b,c;
+	public:
+		maximum()
+		{
+		 a=b=c=0;
+		}
+		maximum(int a1,int b2,int c3)
+		{
+			a=a1;
+			b=b2;
+			c=c3;
+		}
+		void max()
+		{
+			if((a>b) && (a>c))
+			{
+				cout<<"A is Max : "<<a;
+			}
+			else if(b>c)
+			{
+				cout<<"B is max : "<<b;
+			}
+			else
+			{
+				cout<<"C is max : "<<c;
+			}
+		}
+};
+
+void main()
+{
+	maximum m1;
+	int x,y,z;
+	clrscr();
+	cout<<"Enter X : ";
+	cin>>x;
+	cout<<"Enter Y : ";
+	cin>>y;
+	cout<<"Enter Z : ";
+	cin>>z;
+	maximum m2(x,y,z);
+	m2.max();
+	getch();
+
+}

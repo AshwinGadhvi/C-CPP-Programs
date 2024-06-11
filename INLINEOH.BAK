@@ -1,0 +1,21 @@
+#include<iostream.h>
+#include<conio.h>
+
+inline void op(int r1);
+
+void main()
+{
+	int r1;
+	clrscr();
+	cout<<"Enter r : ";
+	cin>>r1;
+	op(r1);
+	getch();
+}
+
+void op(int r1)
+{
+	int temp;
+	temp=r1*r1;
+	cout<<temp;
+}

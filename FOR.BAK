@@ -1,0 +1,14 @@
+#include<iostream.h>
+#include<conio.h>
+#include<iomanip.h>
+
+void main()
+{
+	int val;
+	clrscr();
+	cin>>val;
+	cout.fill('#');
+	cout.width(5);
+	cout.precision(2);
+	getch();
+}

@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int a[10],i,n,pos,value;
+	clrscr();
+	printf ("enter a array Elements::");
+	scanf ("%d",&n);
+	printf ("Enter %d elemnts\n",n);
+	for(i=0;i<n;i++)
+	{
+		printf ("a[%d]=",i);
+		scanf("%d",&a[i]);
+	}
+	printf ("\nenter a pos::");
+	scanf("%d",&pos);
+	printf ("\nenter a value::");
+	scanf ("%d",&value);
+	for(i=n;i<pos;i--)
+	{
+		a[i]=a[i-1];
+	}
+	a[pos]=value;
+	n++;
+	for(i=0;i<n;i++)
+	{
+		printf ("a[%d]=%d\n",i,a[i]);
+
+	}
+	getch();
+}
+

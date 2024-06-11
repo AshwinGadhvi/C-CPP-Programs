@@ -1,0 +1,31 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int i,pos,val,a[20],n;
+	clrscr();
+	cout<<"Enter Array Size : ";
+	cin>>n;
+	cout<<"Enter "<<n<<" Element : "<<endl;
+	for(i=0;i<n;i++)
+	{
+		cout<<"a["<<i<<"] = ";
+		cin>>a[i];
+	}
+	cout<<"Enter Pos : ";
+	cin>>pos;
+	cout<<"Enter VAl : ";
+	cin>>val;
+	for(i=n;i>=pos;i--)
+	{
+		a[i+1]=a[i];
+	}
+	a[pos]=val;
+	n++;
+	for(i=0;i<n;i++)
+	{
+		cout<<"a["<<i<<"] = "<<a[i]<<endl;
+	}
+	getch();
+}

@@ -1,0 +1,54 @@
+#include<iostream.h>
+#include<conio.h>
+
+class op
+{
+	private:
+	int r;
+	public:
+		int marks;
+		void get_data()
+		{
+			cout<<"Enter Roll Number  : ";
+			cin>>r;
+			cout<<"Enter Mid sem mark : ";
+			cin>>marks;
+		}
+		void show_data()
+		{
+			cout<<"Roll number is : "<<r<<endl;
+			cout<<"Marks id : "<<marks<<endl;
+		}
+};
+
+class kake:public op
+{
+	private:
+		int final,ans;
+	public:
+		void get_data()
+		{
+			cout<<"Enter Final Exam marks : ";
+			cin>>final;
+		}
+		void cal()
+		{
+			ans=marks+final;
+		}
+		void show_data()
+		{
+			cout<<"Total marks is : "<<ans;
+		}
+};
+
+void main()
+{
+	op w;
+	kake k;
+	clrscr();
+	w.get_data();
+	k.get_data();
+	k.cal();
+	k.show_data();
+	getch();
+}

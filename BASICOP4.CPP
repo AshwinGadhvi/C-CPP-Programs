@@ -1,0 +1,55 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+class city
+{
+		int population,max;
+		char town[20];
+	public:
+		void get_data()
+		{
+			cout<<"Enter city name : ";
+			gets(town);
+			cout<<"Enter Population of city : ";
+			cin>>population;
+		}
+		void show_data()
+		{
+			cout<<"Name of City is : "<<town<<endl;
+			cout<<"Population of city is : "<<population<<endl;
+		}
+		void max(int *n)
+		{
+			int a[20],i;
+			max=a[0];
+			for(i=0;i<n;i++)
+			{
+				if(a[population]>max)
+				{
+					max=a[population];
+				}
+			}
+		}
+};
+
+void main()
+{
+	city op[20];
+	int i,n;
+	clrscr();
+	cout<<"Enter how many city : ";
+	cin>>n;
+	cout<<"Enter total "<<n<<" City of data : "<<endl;
+	for(i=0;i<n;i++)
+	{
+		cout<<"Enter "<<i+1<<" City data : "<<endl;
+		op[i].get_data();
+	}
+	cout<<"---------information---------"<<endl;
+	for(i=0;i<n;i++)
+	{
+		op[i].show_data();
+	}
+	getch();
+}

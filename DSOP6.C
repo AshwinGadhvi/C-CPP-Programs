@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int a[20],i,n,val,pos;
+	clrscr();
+	printf("Enter Number of elements : ");
+	scanf("%d",&n);
+	printf("Enter %d Element\n",n);
+	for(i=0;i<n;i++)
+	{
+		printf("a[%d] = ",i);
+		scanf("%d",&a[i]);
+	}
+	printf("Enter Pos : ");
+	scanf("%d",&pos);
+	printf("Enter Val : ");
+	scanf("%d",&val);
+	for(i=n;i>=pos;i--)
+	{
+		a[i+1]=a[i];
+	}
+	a[pos]=val;
+	n++;
+	for(i=0;i<n;i++)
+	{
+		printf("%d\n",a[i]);
+	}
+	getch();
+}

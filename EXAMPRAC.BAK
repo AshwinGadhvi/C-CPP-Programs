@@ -1,0 +1,13 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int a,b,c,d,e,ans;
+	clrscr();
+	cout<<"Enter 5 Number : ";
+	cin>>a>>b>>c>>d>>e;
+	ans = (a+b+c+d+e)/5;
+	cout<<"average of 5 number is : "<<ans;
+	getch();
+}

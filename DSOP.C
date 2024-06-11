@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int i,count=0;
+	char str[50];
+	clrscr();
+	printf("Enter string : ");
+	gets(str);
+	printf("String is : %s ",str);
+	for(i=0;str[i]!=NULL;i++)
+	{
+		count++;
+	}
+	printf("Length of string is : %d",count);
+	getch();
+}

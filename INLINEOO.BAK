@@ -1,0 +1,16 @@
+#include<iostream.h>
+#include<conio.h>
+
+inline int area(int s)
+{
+	return s*s*s;
+}
+int main()
+{
+	int s;
+	clrscr();
+	cout<<"Enter s : ";
+	cin>>s;
+	area(s);
+	getch();
+}

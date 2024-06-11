@@ -1,0 +1,43 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+
+class employee
+{
+	private:
+	int id,s;
+	char name[20];
+	public:
+	void input(int p,int q,char a[] )
+	{
+		id=p;
+		s=q;
+		strcpy(name,a);
+	}
+	void display();
+};
+void employee::display()
+{
+	cout<<"roll number is "<<id<<endl;
+	cout<<"salary is "<<s<<endl;
+	cout<<"name is "<<name<<endl;
+}
+int main()
+{
+	employee s1,s2,s3,a[10];
+	clrscr();
+	s1.input(02,9000,"Ashwin");
+	s2.input(13,8000,"Kush");
+	s3.input(14,7000,"Hem");
+	cout<<"Detail first employee information::"<<endl;
+	s1.display();
+	cout<<"--------------------------------------------"<<endl;
+	cout<<"Detail second employee information::"<<endl;
+	s2.display();
+	cout<<"--------------------------------------------"<<endl;
+	cout<<"Detail thied employee information::"<<endl;
+	s3.display();
+	cout<<"--------------------------------------------"<<endl;
+	getch();
+	return 0;
+}

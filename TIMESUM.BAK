@@ -1,0 +1,56 @@
+#include<iostream.h>
+#include<conio.h>
+
+class op{
+	private:
+		int a,b,c;
+	public:
+		op()
+		{
+			a=0;
+			b=0;
+			c=0;
+		}
+		op(int a1,int b1,int c1)
+		{
+			a=a1;
+			b=b1;
+			c=c1;
+		}
+		op(op& v)
+		{
+			a=v.a;
+			b=v.b;
+			c=v.c;
+		}
+	  /*	op(po& v1)
+		{
+			a=v1.a;
+			b=v1.b;
+			c=v1.c;
+		}
+		void sum()
+		{
+			int l,m,n;
+			l=p.a+p1.a;
+			m=p.b+p1.b;
+			n=p.c+p1.c;
+		} */
+		void show()
+		{
+			cout<<"Sum is : "<<a<<" "<<b<<" "<<c<<endl;
+		}
+};
+
+void main()
+{
+	clrscr();
+	op p;
+	p.show();
+	op p2(10,20,30);
+	p2.show();
+	op p3(p2);
+     //	p2.sum();
+	p3.show();
+	getch();
+}

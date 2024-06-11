@@ -1,0 +1,14 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+void main()
+{
+	char str[20];
+	clrscr();
+	cout<<"Enter String : ";
+	gets(str);
+	cout<<"String is : ";
+	puts(str);
+	getch();
+}

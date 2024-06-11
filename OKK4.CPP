@@ -1,0 +1,54 @@
+#include<iostream.h>
+#include<conio.h>
+
+class point{
+	private:
+		int a,b;
+	public:
+		point()
+		{
+			a=0;
+			b=0;
+		}
+		point(int x1,int y1)
+		{
+			a=x1;
+			b=y1;
+		}
+		point add_point(point p2)
+		{
+			point temp;
+			temp.a=a+p2.a;
+			temp.b=b+p2.b;
+			return temp;
+		}
+		void put_point()
+		{
+			cout<<"("<<a<<","<<b<<")"<<endl;
+		}
+};
+
+void main()
+{
+	int m,n;
+	clrscr();
+	cout<<"Enter First Time : "<<endl;
+	cout<<"Enter M : ";
+	cin>>m;
+	cout<<"Enter N : ";
+	cin>>n;
+	point p1=point(m,n);
+
+	cout<<"Enter Second Time : "<<endl;
+	cout<<"Enter M : ";
+	cin>>m;
+	cout<<"Enter N : ";
+	cin>>n;
+	point p2=point(m,n);
+	point p3;
+	p3=p1.add_point(p2);
+	cout<<"Addition of Points : "<<endl;
+	p3.put_point();
+	getch();
+
+}

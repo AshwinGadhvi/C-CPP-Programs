@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int i=0,n,sum=0;
+	clrscr();
+	printf ("how many number");
+	scanf ("%d",&n);
+	for (i;i<=n;i+=2)
+	{
+
+		sum+=i;
+		printf ("sum=%d",sum);
+	}
+	getch();
+}

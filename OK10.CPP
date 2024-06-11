@@ -1,0 +1,12 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	clrscr();
+	enum friends{ashiwn=1,lalu,babu,samarth,sidhu,dipen};
+	enum friends o;
+	o=samarth;
+	cout<<" "<<o;
+	getch();
+}

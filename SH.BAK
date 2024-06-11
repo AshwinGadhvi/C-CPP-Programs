@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+void main()
+{
+	char a[20],b[20];
+	int i,c=0,j,flag=0;
+	clrscr();
+	printf ("Enter string::");
+	gets(a);
+	for(i=0;a[i]!='\0';i++)
+	{
+		c++;
+	}
+	printf("l is %d\n",c);
+	for(i=c-1,j=0;i>=0;i--,j++)
+	{
+		b[j]=a[i];
+	}
+	b[j]=NULL;
+	for(i=0;i>=c-1;i++)
+	{
+		if(a[i]==b[i])
+		{
+			flag=1;
+		}
+		else
+		{
+			flag=0;
+			break;
+		}
+	}
+	if(flag==1)
+	{
+		printf ("pelindronme::");
+	}
+	else
+	{
+		printf ("not pelindrome:;");
+	}
+	getch();
+}
+

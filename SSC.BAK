@@ -1,0 +1,47 @@
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int english,matsh,science,s_science,gujrati,total,fail;
+	float percentage;
+	clrscr();
+	printf ("enter the value of english matsh science s_science gujrati");
+	scanf ("%d%d%d%d%d",&english,&matsh,&science,&s_science,&gujrati);
+	total=english+matsh+science+s_science+gujrati;
+	printf ("total marks obtain out of 500 is %d",total);
+	percentage=total*100/500;
+	printf ("\npercentage %1.2f",percentage);
+	if (english<33)
+	{
+		printf ("\nenglish");
+	}
+	if (matsh<=33)
+	{
+		printf ("\nmatsh");
+	}
+	if (science<=33)
+	{
+		printf ("\nscience");
+	}
+	if (s_science<=33)
+	{
+		printf ("\ns_science");
+	}
+	if (gujrati<=33)
+	{
+		printf ("\ngujrati");
+	}
+	if (fail>1)
+	{
+		printf ("\nyou are fail");
+	}
+	else
+	{
+		printf ("\nyou are pass");
+	}
+
+	getch();
+
+}

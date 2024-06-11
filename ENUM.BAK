@@ -1,0 +1,12 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	clrscr();
+	enum number{1=1,2,3,4,5};
+	enum number nu;
+	nu=3;
+	cout<<nu;
+	getch();
+}

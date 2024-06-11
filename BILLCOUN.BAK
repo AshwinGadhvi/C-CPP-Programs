@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int units;
+	float ucharge,fcharge,gtax,meter_rent=25,total;
+	clrscr();
+	puts ("enter units");
+	scanf ("%d",&units);
+	if (units<=50)
+	{
+		ucharge=0.5*units;
+	}
+	else if (units<=100)
+	{
+		ucharge=50*0.5+(units-50)*0.75;
+	}
+	else if (units<=200)
+	{
+		ucharge=50*0.5+50*0.5+0.75+(unitd-100)*1.00;
+	}
+	else
+	{
+		ucharge=50*0.5+50*0.75+100*1.00+(units-200)*1.50;
+	}
+	fcharge=0.40*ucharge;
+	gtax=0.10*(ucharge+fcharge);
+	total=ucharge+fcharge+gtax+meter_rent;
+	puts ("total bill is %f",total);
+	getch();
+}

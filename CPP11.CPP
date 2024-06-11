@@ -1,0 +1,27 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int number,i,flag=0;
+	clrscr();
+	cout<<"Enter Number : ";
+	cin>>number;
+	for(i=2;i<number;i++)
+	{
+		if(number%i==0)
+		{
+			flag=1;
+			break;
+		}
+	}
+	if(flag==0)
+	{
+		cout<<"Number is Prime : "<<number;
+	}
+	if(flag==1)
+	{
+		cout<<"Number is Composite : "<<number;
+	}
+	getch();
+}

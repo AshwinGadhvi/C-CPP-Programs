@@ -1,0 +1,19 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int i,count=0;
+	char str[20];
+	clrscr();
+	cout<<"Enter string : ";
+	cin>>str;
+	cout<<"String is : "<<str<<endl;
+	cout<<"Performing program : "<<endl;
+	for(i=0;str[i]!=NULL;i++)
+	{
+		count++;
+	}
+	cout<<"Length of string is : "<<count;
+	getch();
+}

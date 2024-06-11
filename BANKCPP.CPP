@@ -1,0 +1,158 @@
+#include<iostream.h>
+#include<conio.h>
+#include<process.h>
+#define size 50
+
+class account
+{
+	static int count;
+	char acc_name[100];
+	int acc_no;
+	int balance;
+
+	public:
+	int static get_count(){return count;}
+	void credit(int amt);
+	void debit(int amt);
+	void showaccount();
+	void createaccount();
+	int get_account_no(){return acc_no;}
+};
+
+int account::count=0;
+
+void account::createaccount()
+{
+	count++;
+	cout<<"Enter Account Holder Name::";
+	cin>>acc_name;
+	cout<<"Enter Account No ::";
+	cin>>acc_no;
+	cout<<"Enter Opening Balancr::";
+	cin>>balance;
+}
+void account::showaccount()
+{
+	cout<<"**************************************************\n";
+	cout<<"Holder Name::"<<acc_name<<endl;
+	cout<<"Account No ::"<<acc_no<<endl;
+	cout<<"Balance    ::"<<balance<<endl;
+	cout<<"**************************************************\n";
+
+}
+
+void account::credit(int amt)
+{
+	balance+=amt;
+	cout<<"Almost is Deposited New Balance is ::"<<balance;
+}
+
+void account::debit(int amt)
+{
+	if((balance-amt)<1000)
+	{
+		cout<<"Transaction Fail";
+	}
+	else
+	{
+		balance-=amt;
+		cout<<"Almost is Withdrawed Available Balance ::"<<balance;
+	}
+}
+
+
+void main()
+{
+	account a[50];
+	int choice,accno,count,bal;
+	clrscr();
+	while(1)
+	{
+		clrscr();
+		cout<<"1.For Create Account\n2.for Credit Amount\n3.for Debit amount\n4.For show account\n5.For exit\n\nEnter Your choice::";
+		cin>>choice;
+		switch(choice)
+		{
+			case 1:
+				count=account::get_count();
+				if(count<=size)
+				{
+					a[count].createaccount();
+					cout<<"Account creaated::";
+				}
+				else
+				{
+					cout<<"Limit REached..";
+				}
+				break;
+			case 2:
+				count=account::get_count();
+				cout<<"Enter Account Number::";
+				cin>>accno;
+				cout<<"Enter Amount to deposit";
+				cin>>bal;
+				int flag=0;
+				for(int i=0;i<count;i++)
+				{
+					if(a[i].get_account_no()==accno)
+					{
+						flag=1;
+						a[i].credit(bal);
+					}
+
+				}
+				if(flag==0)
+				{
+					cout<<"Invalid account No::";
+				}
+				break;
+			case 3:
+
+				count=account::get_count();
+				cout<<"Enter Account Number::";
+				cin>>accno;
+				cout<<"Enter Amount to deposit";
+				cin>>bal;
+				flag=0;
+				for(i=0;i<count;i++)
+				{
+					if(a[i].get_account_no()==accno)
+					{
+						flag=1;
+						a[i].debit(bal);
+					}
+
+				}
+				if(flag==0)
+				{
+					cout<<"Invalid account No::";
+				}
+				break;
+			case 4:
+
+				count=account::get_count();
+				cout<<"Enter Account Number::";
+				cin>>accno;
+				flag=0;
+				for(i=0;i<count;i++)
+				{
+					if(a[i].get_account_no()==accno)
+					{
+						flag=1;
+						a[i].showaccount();
+					}
+
+				}
+				if(flag==0)
+				{
+					cout<<"Invalid account No::";
+				}
+				break;
+			case 5:
+				exit (0);
+			default:
+				cout<<"Invalid Choice";
+				break;
+		}
+	}
+}

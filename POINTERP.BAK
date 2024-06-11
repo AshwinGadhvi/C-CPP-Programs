@@ -1,0 +1,13 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int a,*p;
+	clrscr();
+	a=10;
+	p=&a;
+	cout<<*p<<endl;
+	cout<<&p;
+	getch();
+}

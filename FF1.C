@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+
+int f(int n)
+{
+	int fact=1;
+	if(n==1)
+	{
+		return 1;
+	}
+	else
+	{
+		fact=n*f(n-1);
+		return fact;
+	}
+}
+void main()
+{
+	clrscr();
+	printf("%d",f(5));
+	getch();
+}

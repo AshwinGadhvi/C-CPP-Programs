@@ -1,0 +1,66 @@
+#include<iostream.h>
+#include<conio.h>
+#include<process.h>
+
+void enqueue(int a[],int *n,int *top)
+{
+	int val,i;
+	if((*top)>=(*n)-1)
+	{
+		cout<<"Stack is Empty : ";
+	}
+	{
+		cout<<"Enter val : ";
+		cin>>val;
+		(*top)=(*top)+1;
+		a[(*top)]=val;
+	}
+}
+
+void travrse(int *top,int a[])
+{
+	int i;
+	if((*top)==-1)
+	{
+		cout<<"Stack is Empty : ";
+	}
+	else
+	{
+		for(i=0;i<=(*top);i++)
+		{
+			cout<<a[i];
+		}
+	}
+}
+
+void main()
+{
+	int top=-1,choice,*a,n;
+	clrscr();
+	cout<<"Enter Size of Queue element : ";
+	cin>>n;
+	while(1)
+	{
+		clrscr();
+		cout<<"1.For Enqueue\n2.For Dequeue\n3.For Traverse\n4.For Exit\nEnter Choice : ";
+		cin>>choice;
+		switch(choice)
+		{
+			case 1:
+				enqueue(a,&n,&top);
+				break;
+			case 2:
+				break;
+			case 3:
+				travrse(a,&top);
+				break;
+			case 4:
+				exit(0);
+				break;
+			default:
+				cout<<"Enter invalid choice : ";
+				break;
+		}
+		getch();
+	}
+}

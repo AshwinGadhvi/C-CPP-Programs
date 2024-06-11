@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int i,a,b;
+	clrscr();
+	printf ("enter the value of a and b");
+	scanf ("%d%d",&a,&b);
+	i=a;
+	while (i<=b)
+	{
+		printf ("%d\n",i);
+		i++;
+	}
+	getch();
+}
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+#include<iostream.h>
+#include<conio.h>
+
+class base
+{
+	private:
+		int a;
+	public:
+		base()
+		{
+			a=0;
+		}
+		base(int a1)
+		{
+			a=a1;
+		}
+		void show()
+		{
+			cout<<"This is base Class Constructor : "<<a;
+		}
+};
+
+class derived:public base
+{
+	private:
+		int b;
+	public:
+		derived():base()
+		{
+			b=0;
+		}
+		derived(int b1)
+		{
+			b=b1;
+		}
+		void show()
+		{
+			cout<<"This Is derived Class Constructor : "<<b;
+		}
+};
+
+void main()
+{
+	clrscr();
+	base op;
+	base b1(15);
+	derived *ptr;
+	ptr = &b1;
+	ptr->show();
+	getch();
+}

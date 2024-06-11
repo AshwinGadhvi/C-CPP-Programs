@@ -1,0 +1,53 @@
+#include<iostream.h>
+#include<conio.h>
+
+class prime
+{
+	int n;
+	public:
+	prime()
+	{
+		n=0;
+	}
+	prime(int a)
+	{
+		n=a;
+	}
+	friend int show(prime);
+};
+
+int show(prime p)
+{
+	int i,flag=0;
+	for(i=2;i<p.n;i++)
+	{
+		if(p.n%i==0)
+		{
+			flag=1;
+			break;
+		}
+		else
+		{
+			flag=0;
+		}
+	}
+	return flag;
+}
+
+void main()
+{
+	int temp=0,n;
+	clrscr();
+	cout<<"ENter n : ";
+	cin>>n;
+	temp=show(n);
+	if(temp==1)
+	{
+		cout<<"Not prime";
+	}
+	else
+	{
+		cout<<"prime";
+	}
+	getch();
+}

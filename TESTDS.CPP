@@ -1,0 +1,40 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int value,pos,a[20],n,i;
+	clrscr();
+	cout<<"Enter Size of array : ";
+	cin>>n;
+	cout<<"Enter "<<n<<" element into array "<<endl;
+	for(i=0;i<n;i++)
+	{
+		cin>>a[i];
+	}
+	cout<<"Entered Array : "<<endl;
+	for(i=0;i<n;i++)
+	{
+		cout<<a[i];
+		cout<<endl;
+	}
+	cout<<"Performin program :"<<endl;
+	cout<<"Enter pos to insert element : ";
+	cin>>pos;
+	cout<<"Enter value to insertion : ";
+	cin>>value;
+	for(i=n;i>=pos;i--)
+	{
+		a[i+1]=a[i];
+	}
+	a[pos]=value;
+	n++;
+	cout<<"After insertion array : "<<endl;
+	for(i=0;i<n;i++)
+	{
+		cout<<a[i];
+		cout<<endl;
+	}
+	getch();
+}
+

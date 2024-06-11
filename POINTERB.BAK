@@ -1,0 +1,29 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+int main()
+{
+	char str[100],*s;
+	int i;
+	clrscr();
+	cout<<"Enter string : ";
+	gets(str);
+	for(i=0;str[i]!=NULL;i++)
+	{
+		if(str[i]>='a' && str[i]<='z')
+		{
+			str[i]-=32;
+		}
+		else
+		{
+			puts(str);
+		}
+	}
+	for(i=0;str[i]!=NULL;i++)
+	{
+		cout<<str[i];
+	}
+	getch();
+	return 0;
+}

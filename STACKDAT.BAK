@@ -1,0 +1,50 @@
+#include<iostream.h>
+#include<conio.h>
+#include<process.h>
+
+
+void push(int a[],int *n,int *val,int *top)
+{
+	if((*top)==(*n))
+	{
+		cout<<"Stack is overflow";
+	}
+	else
+	{
+		cout<<"Enter value for insert : ";
+		cin>>(*val);
+		(*top)=(*top)+1;
+		a[(*top)]=(*val);
+	}
+}
+
+void main()
+{
+	int *a,top=-1,choice,*val,*n;
+	cout<<"Enter size of n : ";
+	cin>>(*n);
+	clrscr();
+	while(1)
+	{
+		clrscr();
+		cout<<"1.For Push\n2.For Peep\n3.For Display\n4.For Exit\nEnter Your choice : ";
+		cin>>choice;
+		switch(choice)
+		{
+			case 1:
+				push(a,n,val,&top);
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				exit(0);
+				break;
+			default:
+				cout<<"Invalid choice : ";
+				break;
+		}
+		getch();
+	}
+}

@@ -1,0 +1,46 @@
+#include<iostream.h>
+#include<conio.h>
+
+class maxi
+{
+	private:
+		int m,n;
+	public:
+		void getdata(int a,int b)
+		{
+		       m=a;
+		       n=b;
+		}
+		void max();
+		void display()
+		{
+			cout<<"m is "<<m<<endl;
+			cout<<"n is "<<n<<endl;
+		}
+};
+void maxi::max()
+{
+	if(m>n)
+	{
+		cout<<"M is Max::"<<m;
+	}
+	else
+	{
+		cout<<"N is Max::"<<n;
+	}
+}
+
+int main()
+{
+	maxi m1;
+	int k,l;
+	clrscr();
+	cout<<"ENter k";
+	cin>>k
+	cout<<"Enter l";
+	cin>>l;
+	m1.getdata(k,l);
+	m1.max();
+	getch();
+	return 0;
+}

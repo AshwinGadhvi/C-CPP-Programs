@@ -1,0 +1,44 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int i,j,count=0,flag=0;
+	char a[100],b[100];
+	clrscr();
+	cout<<"Enter a number : ";                           2
+
+	cin>>a;
+	for(i=0;a[i]!=NULL;i++)
+	{
+		count++;
+	}
+	cout<<"Length is : "<<count<<endl;
+	for(i=count-1,j=0;i>=0;i--,j++)
+	{
+		b[j]=a[i];
+	}
+	b[j]=NULL;
+	cout<<"Reverse is : "<<b<<endl;
+	for(i=0;i<=count-1;i++)
+	{
+		if(a[i]==b[j])
+		{
+			flag=1;
+		}
+		else
+		{
+			flag=0;
+			break;
+		}
+	}
+	if(flag==1)
+	{
+		cout<<"Number is pelindrome : ";
+	}
+	if(flag==0)
+	{
+		cout<<"Number is not pelindrome : ";
+	}
+	getch();
+}

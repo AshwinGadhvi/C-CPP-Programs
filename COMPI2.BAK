@@ -1,0 +1,17 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int i,n,ld,rev=0;
+	clrscr();
+	cout<<"Enter n : ";
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		ld=n+10;
+		rev=ld/10;
+	}
+	cout<<rev;
+	getch();
+}

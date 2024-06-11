@@ -1,0 +1,110 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+void read(char *str)
+{
+	printf("Enter string For Perform program: ");
+	gets(str);
+}
+
+void display(char *str)
+{
+	printf("Entered String is ");
+	puts(str);
+}
+
+void length(char *str)
+{
+	int i,count=0;
+	for(i=0;str[i]!=NULL;i++)
+	{
+		count++;
+	}
+	printf("Length is %d",count);
+}
+
+void copy(char *str,char *cp)
+{
+	int i,j;
+	for(i=0,j=0;str[i]!=NULL;i++,j++)
+	{
+		cp[j]=str[i];
+	}
+	cp[j]=NULL;
+	printf("Copied String is %s",cp);
+}
+
+void reverse(char *str,char *cp)
+{
+	int i,j;
+	for(i=strlen(str)-1,j=0;str[i]!=NULL;i--,j++)
+	{
+		cp[j]=str[i];
+	}
+	cp[j]=NULL;
+	printf("Reverse String is %s",cp);
+}
+
+void concate(char *str,char *cp,char *cn)
+{
+	int i,j,k;
+	printf("Enter String For Concate:: ");
+	gets(cn);
+	i=0;
+	k=0;
+	j=0;
+	while(str[i]!=NULL)
+	{
+		cp[j]=str[i];
+		i++;
+		j++;
+	}
+	cp[j]!=NULL;
+	while(cn[k]!=NULL);
+	{
+		cp[j]=cn[k];
+		k++;
+		j++;
+	}
+	cp[j]!=NULL;
+	printf("Concate is %s",cp);
+}
+
+void main()
+{
+	int choice;
+	char *str[100],*cp[100],*cn[100];
+	while(1)
+	{
+		clrscr();
+		printf("1.For Read string\n2.For Display string\n3.For Find Length\n4.For Copy String\n5.For Reverse String\n6.For Concate String\nEnter Your choce::");
+		scanf("%d",&choice);
+		fflush(stdin);
+		switch(choice)
+		{
+			case 1:
+				read(str);
+				break;
+			case 2:
+				display(str);
+				break;
+			case 3:
+				length(str);
+				break;
+			case 4:
+				copy(str,cp);
+				break;
+			case 5:
+				reverse(str,cp);
+				break;
+			case 6:
+				concate(str,cp,cn);
+			case 7:
+				exit(0);
+				break;
+		}
+		getch();
+
+	}
+}

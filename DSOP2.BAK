@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+void main()
+{
+	int i,j;
+	char str[50],temp[50];
+	clrscr();
+	printf("Enter string : ");
+	gets(str);
+	printf("String is : %s ",str);
+	for(i=strlen(str)-1;j=0;i>=NULL;i--,j++)
+	{
+		temp[j]=str[i];
+	}
+	temp[j]=NULL;
+	printf("\nREverse of string is : %s",temp);
+	getch();
+}

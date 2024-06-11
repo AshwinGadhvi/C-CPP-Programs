@@ -1,0 +1,12 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	enum week{mon=1,tue,wed,thu,fri,sat};
+	enum week a;
+	clrscr();
+	a=thu;
+	cout<<" "<<a;
+	getch();
+}

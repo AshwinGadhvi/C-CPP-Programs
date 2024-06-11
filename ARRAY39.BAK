@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int i,n,a[10],odd_count=0,even_count=0;
+	clrscr();
+	printf ("enter a elements of array");
+	scanf("%d",&n);
+	printf ("\nenter %d elements",n);
+	for(i=0;i<n;i++)
+	{
+		printf ("enter a[%d]",i);
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+		if(a[i]%2==0)
+		{
+			even_count++;
+		}
+		else
+		{
+			odd_count++;
+		}
+	}
+	printf ("odd count is %d\neven count is %d",odd_count,even_count);
+	getch();
+}

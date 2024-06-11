@@ -1,0 +1,67 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int number;
+	clrscr();
+	cout<<"Enter Number : ";
+	cin>>number;
+	if(number>0)
+	{
+		cout<<"Number is positive : "<<endl;
+		if(number%2==0)
+		{
+			 cout<<"Number is Even : "<<endl;
+			 if(number>=18)
+			 {
+				cout<<"Eligible For Vote : ";
+			 }
+			 else
+			 {
+				cout<<"Not Eligible For Vote : ";
+			 }
+		}
+		else
+		{
+			 cout<<"Number is Odd : "<<endl;
+			 if(number>=18)
+			 {
+				cout<<"Eligible For Vote : ";
+			 }
+			 else
+			 {
+				cout<<"Not Eligible For Vote : ";
+			 }
+		}
+	}
+	else
+	{
+	 cout<<"Number is nagative : ";
+		if(number%2==0)
+		{
+			 cout<<"Number is Even : "<<endl;
+			 if(number>=18)
+			 {
+				cout<<"Eligible For Vote : ";
+			 }
+			 else
+			 {
+				cout<<"Not Eligible For Vote : ";
+			 }
+		}
+		else
+		{
+			 cout<<"Number is Odd : "<<endl;
+			 if(number>=18)
+			 {
+				cout<<"Eligible For Vote : ";
+			 }
+			 else
+			 {
+				cout<<"Not Eligible For Vote : ";
+			 }
+		}
+	}
+	getch();
+}

@@ -1,0 +1,20 @@
+#include<iostream.h>
+#include<conio.h>
+#define pi 3.14
+
+void main()
+{
+	float a,c,r,h;
+	clrscr();
+	cout<<"Enter a value for a cube : ";
+	cin>>c;
+	a=c*c*c;
+	cout<<"Volume of cube is : "<<a<<endl;
+	cout<<"--------------------------"<<endl;
+	cout<<"Enter redius and hieght : ";
+	cin>>r>>h;
+	a=pi*r*r*h;
+	cout<<"Volume of Cylinder is : "<<a<<endl;
+	cout<<"--------------------------";
+	getch();
+}

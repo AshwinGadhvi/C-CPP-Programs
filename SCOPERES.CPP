@@ -1,0 +1,15 @@
+#include<iostream.h>
+#include<conio.h>
+
+int x=10;
+
+void main()
+{
+	int x;
+	clrscr();
+	cout<<"Enter X : ";
+	cin>>x;
+	cout<<"X is : "<<x;
+	cout<<endl<<"X as Global : "<<::x;
+	getch();
+}

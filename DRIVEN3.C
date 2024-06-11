@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int n,ch,i;
+	clrscr();
+	printf ("enter n");
+	scanf ("%d",&n);
+	printf ("\n1.for given number is odd or even\n2.find fectors of given number\n3.exit program\n enter your choice");
+	scanf ("%d",&ch);
+
+	switch (ch)
+	{
+		case 1:
+			if (n%2==0)
+			{
+				printf ("number is even");
+			}
+			else
+			{
+				printf ("number is odd");
+			}
+			break;
+		case 2:
+			i=1;
+			for (i=1;i<=n;++i)
+			{
+				if (n%i==0)
+				{
+					printf ("\n factors is %d",i);
+				}
+			}
+			break;
+		case 3:
+			exit (0);
+			break;
+		default:
+			printf ("invalid choice");
+			break;
+		}
+		getch();
+}
+

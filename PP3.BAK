@@ -1,0 +1,43 @@
+#include<iostream.h>
+#include<conio.h>
+
+class a
+{
+	int sub1,sub2,sub3,sum=0;
+	public:
+		void get_data()
+		{
+			cout<<"Enter Sub 1 Marks : ";
+			cin>>sub1;
+			cout<<"Enter Sub 2 Marks : ";
+			cin>>sub2;
+			cout<<"Enter Sub 3 Marks : ";
+			cin>>sub3;
+		}
+		void show_data()
+		{
+			cout<<"Sub 1 marks : "<<sub1<<endl;
+			cout<<"Sub 2 marks : "<<sub2<<endl;
+			cout<<"sub 3 marks : "<<sub3<<endl;
+			sum=sub1+sub2+sub3;
+			cout<<"Sum of Marks : "<<sum<<endl;
+		}
+};
+
+void main()
+{
+       a op[10];
+       int i,n;
+       clrscr();
+       cout<<"Enter N : ";
+       cin>>n;
+       for(i=0;i<n;i++)
+       {
+		op[i].get_data();
+       }
+       for(i=0;i<n;i++)
+       {
+		op[i].show_data();
+       }
+       getch();
+}

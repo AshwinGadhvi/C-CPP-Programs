@@ -1,0 +1,31 @@
+#include<iostream.h>
+#include<conio.h>
+
+class op1{
+	int a,b;
+	public:
+		op1()
+		{
+		 a=0;
+		 b=0;
+		}
+		op1(int x1,int y1)
+		{
+			a=x1;
+			b=y1;
+		}
+		void show_data()
+		{
+			cout<<"A is : "<<a<<endl;
+			cout<<"B is : "<<b<<endl;
+		}
+};
+
+void main()
+{
+	op1 k;
+	op1 k1(9,7);
+	clrscr();
+	k1.show_data();
+	getch();
+}

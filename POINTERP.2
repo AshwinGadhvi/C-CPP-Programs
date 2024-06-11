@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+
+struct list
+{
+	char name[20];
+	long int enroll;
+	long int phone;
+};
+
+void main()
+{
+	struct list l1;
+	clrscr();
+	printf("Enter Your Name : ");
+	scanf("%[^\n]s",&l1.name);
+	printf("Enter Your Enrollment : ");
+	scanf("%ld",&l1.enroll);
+	printf("Enter Your Phone number : ");
+	scanf("%ld",&l1.phone);
+	printf("\n******************************\n");
+	printf("|| Information Of Student ||\n");
+	printf("Name is : %s\n",l1.name);
+	printf("Enroll is : %ld\n",l1.enroll);
+	printf("Phone Number is : %ld\n",l1.phone);
+	getch();
+}

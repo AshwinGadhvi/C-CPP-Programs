@@ -1,0 +1,42 @@
+#include<iostream.h>
+#include<conio.h>
+
+class cube
+{
+	private:
+		int l,b,h,z;
+	public:
+		void getdata(int a,int b,int c)
+		{
+		       l=a;
+		       b=b;
+		       h=c;
+		}
+		void area();
+		void display()
+		{
+			cout<<"area is"<<z;
+		}
+};
+void cube::area()
+{
+	z=l*b*h;
+}
+
+int main()
+{
+	cube m1;
+	int k,l,q;
+	clrscr();
+	cout<<"ENter k";
+	cin>>k;
+	cout<<"Enter l";
+	cin>>l;
+	cout<<"Enter q";
+	cin>>q;
+	m1.getdata(k,l,q);
+	m1.area();
+	m1.display();
+	getch();
+	return 0;
+}

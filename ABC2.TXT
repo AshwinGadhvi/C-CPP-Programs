@@ -1,0 +1,8 @@
+/* cd..
+cd source
+dir file*
+....
+
+*.txt
+file d.txt  e.txt
+dir *.txt */

@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<conio.h>
+
+void show(int *p,int *p1)
+{
+	cout<<"Value of A is : "<<*p<<endl;
+	cout<<"Value of B is : "<<*p1<<endl;
+}
+
+void main()
+{
+	int a,b;
+	int *p,*p1;
+	clrscr();
+	cout<<"Enter A : ";
+	cin>>a;
+	cout<<"Enter B : ";
+	cin>>b;
+	show(&a,&b);
+	getch();
+
+}

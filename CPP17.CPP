@@ -1,0 +1,24 @@
+#include<iostream.h>
+#include<conio.h>
+
+void swap(int &a,int &b);
+
+int main()
+{
+	int a,b;
+	clrscr();
+	cout<<"Enter a and b : ";
+	cin>>a>>b;
+	cout<<"Before Swap"<<endl<<"a is : "<<a<<endl<<"b is : "<<b<<endl;
+	swap(a,b);
+	cout<<"After Swap"<<endl<<"a is : "<<a<<endl<<"b is : "<<b;
+	getch();
+	return 0;
+}
+
+void swap(int &a,int &b)
+{
+	int temp=a;
+	a=b;
+	b=temp;
+}

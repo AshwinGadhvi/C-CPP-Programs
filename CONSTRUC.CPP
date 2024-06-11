@@ -1,0 +1,47 @@
+#include<iostream.h>
+#include<conio.h>
+
+class volume
+{
+	private:
+	float v,x,y,z,q;
+	public:
+	volume()
+	{
+		v=0;
+	}
+	volume(int x1,int y1,int z1)
+	{
+		x=x1;
+		y=y1;
+		z=z1;
+		v=x*y*z;
+	}
+	volume(int a,int b,int c,int d)
+	{
+		x=a;
+		y=b;
+		z=c;
+		q=d;
+		v=x*y*z*z*q;
+	}
+	void show_data()
+	{
+		cout<<"Volume Of Cuboid is "<<v<<endl;
+      //		cout<<"Volume of Corn Is "<<v;
+	}
+};
+
+void main()
+{
+	clrscr();
+	volume v1;
+	volume v2(3,4,5);
+	volume v3(1/3,3.14,2,5);
+	v1.show_data();
+	cout<<endl<<"*********************"<<endl;
+	v2.show_data();
+	cout<<endl<<"*********************"<<endl;
+	v3.show_data();
+	getch();
+}

@@ -1,0 +1,115 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+
+class account{
+	private:
+		static count;
+		int account_no;
+		char name[50];
+		float bal;
+	public:
+		void open_account(int a_no,char hol[],float b=1000.0)
+		{
+			count++;
+			account_no=a_no;
+			strcpy(name,hol);
+			bal=b;
+		}
+		static int get_count()
+		{
+			return (count);
+		}
+		float show_bal()
+		{
+			return (bal);
+		}
+		void credit(float amt_d)
+		{
+			bal+amt_d;
+		}
+		void debit(float amt_w)
+		{
+			if(bal-amt_w<1000.0)
+			{
+				cout<<"Balance not sufficient : "<<endl;
+			}
+			else
+			{
+				bal-=amt_w;
+			}
+		}
+};
+
+int account::count;
+
+enum {open=1,bal,credit,debit,exit};
+
+void main()
+{
+	account accts[10];
+	int choise=0;
+	int flag=1;
+	clrscr();
+	while(flag)
+	{
+		clrscr();
+		cout<<endl<<endl<<endl<<endl;
+		cout<<"1.Create New Account"<<endl;
+		cout<<"2.Show balance"<<endl;
+		cout<<"3.Credit ammount"<<endl;
+		cout<<"4.Debit ammount"<<endl;
+		cout<<"5.Exit"<<endl;
+		cout<<endl<<endl;
+		cout<<"Enter Choise : ";
+		cin>>choise;
+		switch(choise)
+		{
+			int t_count;
+			int temp_no;
+			char t_name[50];
+			float a;
+			case (open):
+			t_count=account::get_count();
+			if(t_count+1>1000)
+			{
+				cout<<"Account Can't created : "<<endl;
+			}
+			else
+			{
+				cout<<"Enter name of holder : ";
+				cin>>t_name;
+				cout<<"Give a balance not<1000.0: ";
+				cin>>a;
+				accts[t_count].open_account(1000+t_count,t_name,a);
+				cout<<"Your account no.is : "<<1000+t_acount;
+			}
+			break;
+			case(bal):
+			cout<<"Enter account no :";
+			cin>>temp_no;
+			a=accts[temp_no-1000].show_bal();
+			cout<<"balance : "<<a<<endl;
+			break;
+			case(credit):
+			cout<<"Enter Account no. :";
+			cin>>temp_no;
+			cout<<"give amount to be deposited:";
+			cin>>a;
+			accts[temp_no-1000].credit(a);
+			break;
+			case(debit):
+			cout<<"Enter account no:";
+			cin>>temp_no;
+			cout<<"Give amount to be withdrawn :";
+			cin>>a;
+			accts[temp_no-1000].debit(a);
+			break;
+			case(exit):
+			flag=0;
+		}
+		getch();
+	}
+}
+
+

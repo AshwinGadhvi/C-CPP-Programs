@@ -1,0 +1,73 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+class person
+{
+	public:
+		char name[20],code[12];
+		void get_data()
+		{
+			cout<<"Enter name : ";
+			gets(name);
+			cout<<"Enter code : ";
+			gets(code);
+		}
+		void show()
+		{
+			cout<<"Name is : "<<name;
+			cout<<"Code is : "<<code;
+		}
+};
+
+class account:virtual public person
+{
+	public:
+		int pay;
+		void get_data()
+		{
+			cout<<"Enter Payment : ";
+			cin>>pay;
+		}
+		void show()
+		{
+			cout<<"Payment is : "<<pay;
+		}
+};
+
+class admin:virtual public person
+{
+	public:
+		int exp;
+		void get_data()
+		{
+			cout<<"How many years of experience you have : ";
+			cin>>exp;
+		}
+		void show()
+		{
+			cout<<"I have "<<exp<<" of experience";
+		}
+};
+
+class person1:public admin,public account
+{
+	public:
+		void show()
+		{
+			cout<<"DEtail-----------";
+		}
+}
+
+void main()
+{
+	clrscr();
+	person1 p1;
+	person p;
+	p.get_data();
+	admin a;
+	a.get_data();
+	account a1;
+	a1.get_data();
+	getch();
+}

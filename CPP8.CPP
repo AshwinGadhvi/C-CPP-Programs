@@ -1,0 +1,19 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+	int age;
+	clrscr();
+	cout<<"Enter age for eligieble for vote or not : ";
+	cin>>age;
+	if(age>=18)
+	{
+		cout<<"Eligirble for vote : "<<age;
+	}
+	else
+	{
+		cout<<"Not Eligieble For vote : "<<age;
+	}
+	getch();
+}

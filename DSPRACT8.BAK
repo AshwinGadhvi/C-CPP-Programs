@@ -1,0 +1,27 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+
+void main()
+{
+	int i;
+	char str[20],temp[20];
+	clrscr();
+	cout<<"Enter string for program: ";
+	cin>>str;
+	cout<<"String is : "<<str<<endl;
+	cout<<"Performing string Upper-case : "<<endl;
+	for(i=0;i<strlen(str);i++)
+	{
+		if(str[i]>='a' && str[i]<='z')
+		{
+			temp[i]=str[i]-32;
+		}
+		else
+		{
+			temp[i]=str[i];
+		}
+	}
+	cout<<"Upper-case is : "<<temp;
+	getch();
+}

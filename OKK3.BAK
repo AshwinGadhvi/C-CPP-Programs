@@ -1,0 +1,32 @@
+#include<iostream.h>
+#include<conio.h>
+
+class op{
+	private:
+		int a,b;
+	public:
+		op(){}=0;
+		op(int a1,int b1)
+		{
+			a=a1;
+			b=b1;
+		}
+		friend void sum(int a,int b);
+};
+
+void sum(int a,int b)
+{
+	int ans;
+	ans=a+b;
+	cout<<"Sum is : "<<ans;
+}
+
+void main()
+{
+	op o;
+	op o2(5,5);
+	clrscr();
+	o2=sum(5,5);
+	cout<<"Sum ia : "<<ans;
+	getch();
+}

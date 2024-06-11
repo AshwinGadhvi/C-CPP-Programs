@@ -1,0 +1,40 @@
+#include<iostream.h>
+#include<conio.h>
+
+class time
+{
+	int h,m,s;
+	public:
+		void get_time()
+		{
+			cout<<"Enter Second : ";
+			cin>>s;
+			cout<<"Enter Minutes : ";
+			cin>>m;
+			cout<<"Enter Hours : ";
+			cin>>h;
+		}
+		void add_time(time t1,time t2)
+		{
+			s=t1.s+t2.s;
+			m=t1.m+t2.m+(s/60);
+			h=t1.h+t2.h+(m/60);
+			m%=60;
+			s%=60;
+		}
+		void put_data()
+		{
+			cout<<endl<<h<<":"<<m<<":"<<s;
+		}
+};
+
+void main()
+{
+	time t1,t2,t3;
+	clrscr();
+	t1.get_time();
+	t2.get_time();
+	t3.add_time(t1,t2);
+	t2.put_data();
+	getch();
+}

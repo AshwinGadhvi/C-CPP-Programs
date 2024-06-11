@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int number;
+	clrscr();
+	printf ("enter the vlue of number");
+	scanf();

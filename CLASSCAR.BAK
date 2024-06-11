@@ -1,0 +1,40 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+
+
+class car
+{
+	private:
+	char brand[20];
+	float speed;
+	int type;
+	public:
+	void putdata(char a[],float p,int q)
+	{
+		strcpy(brand[],a);
+		type=p;
+		speed=q;
+	}
+	void putdata();
+};
+void car::putdata()
+{
+	cout<<"Vehicle BRand is"<<brand<<endl;
+	cout<<"vehicle type is "<<type<<endl;
+	cout<<"speed is "<<speed<<endl;
+}
+int main()
+{
+	car s1,s2;
+	clrscr();
+	s1.putdata("JEEP",2,50);
+	s2.putdata("THAR",3,70);
+	cout<<"Detail of first car information::"<<endl;
+	s1.putdata();
+	cout<<"-------------------------------------------"<<endl;
+	cout<<"Detail of second car information::"<<endl;
+	s2.putdata();
+	getch();
+	return 0;
+}

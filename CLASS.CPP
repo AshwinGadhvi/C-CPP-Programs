@@ -1,0 +1,35 @@
+#include<iostream.h>
+#include<conio.h>
+
+class student
+{
+	private:
+	int rollno;
+	float per;
+	public:
+	void input(int p,int q)
+	{
+		rollno=p;
+		per=q;
+	}
+	void display();
+};
+void student::display()
+{
+	cout<<"roll number is "<<rollno<<endl;
+	cout<<"per is "<<per<<endl;
+}
+int main()
+{
+	student s1,s2;
+	clrscr();
+	s1.input(02,99.5);
+	s2.input(13,99.8);
+	cout<<"Detail first student information::"<<endl;
+	s1.display();
+	cout<<"----------------------"<<endl;
+	cout<<"Detail second student information::"<<endl;
+	s2.display();
+	getch();
+	return 0;
+}

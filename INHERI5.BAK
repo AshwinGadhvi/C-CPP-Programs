@@ -1,0 +1,74 @@
+#include<iostream.h>
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+class principle
+{
+	public:
+	char name[20],clg[20];
+	void get_data()
+	{
+		cout<<"Enter name of principle : "<<name;
+		gets(name);
+		cout<<"Enter name of collage : "<<clg;
+		gets(clg);
+	}
+	void show()
+	{
+		cout<<"Name of principle is : "<<name<<endl;
+		cout<<"Name of collage is : "<<clg;
+	}
+};
+
+class dept:public principle
+{
+	public:
+	char dept_id[20],dept_name[20];
+	void get_data()
+	{
+		cout<<"Enter dept id : "<<dept_id;
+		gets(dept_id);
+		cout<<"Enter dept name : "<<dept_name;
+		gets(dept_name);
+	}
+	void show()
+	{
+		cout<<"Dept id is : "<<dept_id<<endl;
+		cout<<"Dept name is : "<<dept_name;
+	       //	dept:show();
+	}
+};
+
+class admin:public principle
+{
+	public:
+	char admi_id[20],admi_name[20];
+	void get_data()
+	{
+		cout<<"Enter admi id : "<<admi_id;
+		gets(admi_id);
+		cout<<"Enter admi name : "<<admi_name;
+		gets(admi_name);
+	}
+	void show()
+	{
+		cout<<"admi id is : "<<admi_id;
+		cout<<"admi name is : "<<admi_name;
+	}
+};
+
+int main()
+{
+	clrscr();
+	admin a1;
+	dept d1;
+	d1.principle::get_data();
+	d1.get_data();
+	a1.get_data();
+	d1.principle::show();
+	d1.show();
+	a1.show();
+	getch();
+	return 0;
+}

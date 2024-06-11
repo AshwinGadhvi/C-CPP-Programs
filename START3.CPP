@@ -1,0 +1,34 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+int c=0;
+
+class start
+{
+	private:
+		char a[20];
+		int i;
+	public:
+		void get_data()
+		{
+		     cout<<"Enter string : ";
+		     gets(a);
+		}
+		void length()
+		{
+			for(i=0;a[i]!=NULL;i++)
+			{
+				c++;
+			}
+			cout<<"Length of string: "<<c<<endl;
+		}
+};
+
+void main()
+{
+	start s;
+	clrscr();
+	s.get_data();
+	s.length();
+	getch();
+}

@@ -1,0 +1,29 @@
+#include<iostream.h>
+#include<conio.h>
+
+int main()
+{
+	int selling,cost,p,l;
+	clrscr();
+	cout<<"enter profit and loss::";
+	cin>>selling>>cost;
+	if(selling>cost)
+	{
+		p=cost-selling;
+		{
+			cout<<"profit is"<<p;
+		}
+	}
+	else
+	{
+		l=selling-cost;
+		{
+			cout<<"loss is"<<l;
+		}
+	}
+	getch();
+	return 0;
+}
+
+
+

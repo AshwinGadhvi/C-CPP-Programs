@@ -1,0 +1,57 @@
+#include<iostream.h>
+#include<conio.h>
+
+class start
+{
+	private:
+		int a[20],i,n,j;
+		void swap(int i,int j)
+		{
+			int temp;
+			temp=a[i];
+			a[i]=a[j];
+			a[j]=temp;
+		}
+	public:
+		void get_array()
+		{
+			cout<<"Enter size of array : ";
+			cin>>n;
+			cout<<"Enter "<<n<<" Element : ";
+			for(i=0;i<n;i++)
+			{
+				cout<<"a ["<<i<<"]= ";
+				cin>>a[i];
+			}
+		}
+		void sort()
+		{
+			for(i=0;i<n;i++)
+			{
+				for(j=i+1;j<n;j++)
+				{
+					if(a[i]>a[j])
+					{
+						swap(i,j);
+					}
+				}
+			}
+		}
+		void show_data()
+		{
+			for(i=0;i<n;i++)
+			{
+				cout<<"a ["<<i<<"]= "<<a[i]<<endl;
+			}
+		}
+};
+
+void main()
+{
+	start s;
+	clrscr();
+	s.get_array();
+	s.sort();
+	s.show_data();
+	getch();
+}

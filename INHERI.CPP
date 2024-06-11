@@ -1,0 +1,58 @@
+#include<iostream.h>
+#include<conio.h>
+
+class base
+{
+	int a;
+	public:
+		int b;
+		void get_ab();
+		int get_a();
+		void show();
+};
+
+void base::get_ab()
+{
+	a=5;
+	b=10;
+}
+
+int base::get_a()
+{
+	return a;
+}
+
+void base::show()
+{
+	cout<<"A is : "<<a;
+	cout<<"B is : "<<b;
+}
+
+class der:public base
+{
+		int c;
+	public:
+		void mul();
+		void show();
+};
+
+void der::mul()
+{
+	c=b*get_a();		//write a for error
+}
+
+void der::show()
+{
+	cout<<"Multiply is : "<<c;
+}
+
+int main()
+{
+	der d1;
+	clrscr();
+	d1.get_ab();
+	d1.mul();
+	d1.show();
+	getch();
+	return 0;
+}

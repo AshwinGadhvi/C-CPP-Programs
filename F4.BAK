@@ -1,0 +1,34 @@
+#include<iostream.h>
+#include<conio.h>
+
+int gst(int a,int b,int c,int a1,int a2)
+{
+	a1=(b*a)/100;
+	a2=(c*a)/100;
+	cout<<"cgst is"<<a1+a2+c;
+	return 0;
+}
+
+int gst(int a,int b,int a3)
+{
+	a3=(a*b)/100;
+	cout<<"gst is"<<a3+a;
+	return 0;
+}
+
+int main()
+{
+	int x,y,z,p,a1,a2,a3;
+	clrscr();
+	cout<<"enter amount::";
+	cin>>z;
+	cout<<"enter cgst and sgst::";
+	cin>>x>>y;
+	cout<<"enter igst:";
+	cin>>p;
+	gst(x,y,z);
+	gst(p,z,a3);
+	getch();
+	return 0;
+
+}
